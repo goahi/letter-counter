@@ -8,9 +8,7 @@ const config = {
     preprocess: preprocess(),
 
     kit: {
-        adapter: adapter({
-            precompress: false,
-        }),
+        adapter: adapter(),
 
         prerender: {
             default: true,
