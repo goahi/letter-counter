@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-node";
+import adapter from "@sveltejs/adapter-cloudflare";
 import preprocess from "svelte-preprocess";
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -11,16 +11,6 @@ const config = {
         adapter: adapter({
             out: "build",
             precompress: false,
-            env: {
-                path: "SOCKET_PATH",
-                host: "HOST",
-                port: "PORT",
-                origin: "ORIGIN",
-                headers: {
-                    protocol: "PROTOCOL_HEADER",
-                    host: "HOST_HEADER",
-                },
-            },
         }),
 
         prerender: {
