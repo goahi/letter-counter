@@ -9,7 +9,6 @@ const config = {
 
     kit: {
         adapter: adapter({
-            out: "build",
             precompress: false,
         }),
 
